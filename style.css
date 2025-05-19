@@ -1,0 +1,448 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.top-bar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info span {
+    margin-right: 1rem;
+    font-size: 0.9rem;
+}
+
+.social-icons a {
+    color: white;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+.logo span {
+    color: #3498db;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 0 5rem;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+}
+
+/* Services Section */
+.services {
+    padding: 5rem 2rem;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+/* Doctors Section */
+.doctors {
+    padding: 5rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.doctors-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.doctor-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 280px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.doctor-card:hover {
+    transform: translateY(-10px);
+}
+
+.doctor-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.doctor-card h3 {
+    padding: 1rem 1rem 0.5rem;
+    color: #2c3e50;
+}
+
+.specialty {
+    padding: 0 1rem;
+    color: #3498db;
+    font-weight: 500;
+}
+
+.bio {
+    padding: 0.5rem 1rem 1.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Appointment Section */
+.appointment {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+    background-color: white;
+}
+
+.appointment-content {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.appointment-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.appointment-content p {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.appointment-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.appointment-form textarea {
+    grid-column: span 2;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.appointment-form button {
+    grid-column: span 2;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.appointment-form button:hover {
+    background-color: #2980b9;
+}
+
+.appointment-image {
+    background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef') center/cover;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-about h3,
+.footer-links h3,
+.footer-contact h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a:hover {
+    color: #3498db;
+}
+
+.footer-contact p {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact i {
+    margin-right: 0.5rem;
+    color: #3498db;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 0 3rem;
+    }
+    
+    .appointment {
+        grid-template-columns: 1fr;
+        min-height: auto; 
+        align-items: center;
+
+    }
+    
+    .appointment-image {
+        width: 10%;
+        height: 30px;
+        min-height: 20px; 
+        max-height: 60px;
+        margin: 2rem auto;
+        display: block;
+        border-radius: 10px;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+    
+    .contact-info {
+        margin-bottom: 0.5rem;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 0;
+        padding: 0.8rem 2rem;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .hero {
+        height: 60vh;
+        padding: 0 2rem;
+        text-align: center;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .doctor-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 70vh;
+        padding: 0 1rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .appointment-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .appointment-form textarea,
+    .appointment-form button {
+        grid-column: span 1;
+    }
+    
+    .appointment-content {
+        padding: 2rem;
+    }
+}
